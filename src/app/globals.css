@@ -1,0 +1,308 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+
+
+@theme inline {
+/* Fonts */
+  --font-sans: var(--font-poppins);
+  --font-heading: var(--font-poppins);
+  --font-brand: var(--font-outfit);
+
+  --breakpoint-desktop: 90rem;
+  --container-site: 90rem;
+  --container-content: 74rem;
+
+/* Body Typography */
+  --text-body-xs: 0.75rem;
+  --text-body-xs--line-height: 1.5rem;
+
+  --text-body-sm: 0.875rem;
+  --text-body-sm--line-height: 1.75rem;
+
+  --text-body-md: 1rem;
+  --text-body-md--line-height: 1.875rem;
+
+  --text-body-lg: 1.125rem;
+  --text-body-lg--line-height: 2rem;
+
+  --text-body-xl: 1.25rem;
+  --text-body-xl--line-height: 2.125rem;
+
+  /* Display Typography */
+  --text-display-xs: 1.5rem;
+  --text-display-xs--line-height: 2.25rem;
+
+  --text-display-md: 2rem;
+  --text-display-md--line-height: 2.875rem;
+
+  --text-display-xl: 2.5rem;
+  --text-display-xl--line-height: 3.5rem;
+
+  --text-display-2xl: 3rem;
+  --text-display-2xl--line-height: 3.75rem;
+
+  --text-display-3xl: 3.5rem;
+  --text-display-3xl--line-height: 4.5rem;
+
+  --tracking-display: -0.02em;
+
+/* Neutral Palette */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-gray-25: #fdfdfd;
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #e9eaeb;
+  --color-gray-300: #d5d7da;
+  --color-gray-400: #a4a7ae;
+  --color-gray-500: #717680;
+  --color-gray-600: #535862;
+  --color-gray-700: #414651;
+  --color-gray-800: #252b37;
+  --color-gray-900: #181d27;
+  --color-gray-950: #0a0d12;
+
+/* Purple brand Palette */
+  --color-purple-50: #f3ebff;
+  --color-purple-400: #8b32ff;
+  --color-purple-500: #6600eb;
+  --color-purple-600: #6941c6;
+  --color-purple-950: #160131;
+
+  /*
+  |--------------------------------------------------------------------------
+  | Orange accent palette
+  |--------------------------------------------------------------------------
+  */
+
+  --color-orange-50: #fff7ef;
+  --color-orange-400: #f3993f;
+  --color-orange-500: #e17b0e;
+  --color-orange-950: #492602;
+
+  /*
+  |--------------------------------------------------------------------------
+  | Status palette confirmed in Figma
+  |--------------------------------------------------------------------------
+  */
+
+  --color-success-50: #ecfdf3;
+  --color-success-200: #abefc6;
+
+  /*
+  |--------------------------------------------------------------------------
+  | Semantic colors
+  |--------------------------------------------------------------------------
+  */
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /*
+  |--------------------------------------------------------------------------
+  | Semantic radius
+  |--------------------------------------------------------------------------
+  |
+  | Tidak mengubah rounded-sm / rounded-md bawaan Tailwind.
+  | Ini mencegah komponen shadcn berubah tanpa disengaja.
+  */
+
+  --radius-logo: 0.5rem;
+  --radius-surface: 0.75rem;
+  --radius-card: 1rem;
+  --radius-panel: 1.25rem;
+  --radius-pill: 9999px;
+
+  /*
+  |--------------------------------------------------------------------------
+  | Shadows
+  |--------------------------------------------------------------------------
+  */
+
+  --shadow-xs: 0 1px 2px rgb(10 13 18 / 5%);
+
+  --shadow-lg:
+    0 12px 16px -4px rgb(10 13 18 / 8%), 0 4px 6px -2px rgb(10 13 18 / 3%),
+    0 2px 2px -1px rgb(10 13 18 / 4%);
+
+  --shadow-card: 0 0 24px rgb(165 165 165 / 20%);
+
+  --shadow-logo:
+    0 1.125px 1.125px -0.5625px rgb(10 13 18 / 13%),
+    0 1.125px 3.375px rgb(10 13 18 / 10%), 0 1.125px 2.25px rgb(10 13 18 / 6%),
+    inset 0 -0.5625px 0.5625px rgb(10 13 18 / 10%);
+
+  /*
+  |--------------------------------------------------------------------------
+  | Gradients confirmed in Figma
+  |--------------------------------------------------------------------------
+  */
+
+  --background-image-blue-gradient: linear-gradient(
+    104.24deg,
+    #002c6e 26.91%,
+    #0c4eaf 89.31%
+  );
+}
+
+/*
+|--------------------------------------------------------------------------
+| Light theme
+|--------------------------------------------------------------------------
+|
+| Dark theme belum dibuat karena belum ada desain dark mode dari Figma.
+*/
+
+:root {
+  color-scheme: light;
+
+  --background: #ffffff;
+  --foreground: #0a0d12;
+
+  --card: #ffffff;
+  --card-foreground: #0a0d12;
+
+  --popover: #ffffff;
+  --popover-foreground: #0a0d12;
+
+  --primary: #6600eb;
+  --primary-foreground: #ffffff;
+
+  --secondary: #f3ebff;
+  --secondary-foreground: #6600eb;
+
+  --muted: #f5f5f5;
+  --muted-foreground: #535862;
+
+  --accent: #fff7ef;
+  --accent-foreground: #492602;
+
+  /*
+   * Functional fallback untuk variant destructive shadcn.
+   * Akan ditinjau lagi ketika error-state Figma tersedia.
+   */
+  --destructive: #d92d20;
+  --destructive-foreground: #ffffff;
+
+  --border: #e9eaeb;
+  --input: #d5d7da;
+  --ring: #8b32ff;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Base styles
+|--------------------------------------------------------------------------
+*/
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    @apply border-border;
+  }
+
+  html {
+    min-width: 320px;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply min-h-svh bg-background font-sans text-foreground antialiased;
+
+    overflow-x: clip;
+    font-synthesis: none;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]) {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    color: var(--foreground);
+    background-color: rgb(102 0 235 / 18%);
+  }
+}
+
+/*
+|--------------------------------------------------------------------------
+| Reduced motion accessibility
+|--------------------------------------------------------------------------
+*/
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  ::before,
+  ::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes hero-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
