@@ -10,8 +10,6 @@ import { profileData } from "@/constant/about-data";
 export function ProfileCard() {
   return (
     <AboutCard className="relative overflow-hidden min-h-[395px] bg-[#6600EB]">
-
-      {/* BACKGROUND TEXT (FIGMA EFFECT) */}
       <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
         <div className="text-[#F39C3F] font-bold text-center leading-[90px] tracking-[-0.02em] opacity-90">
           <div className="text-[64px] md:text-[72px]">
@@ -23,7 +21,6 @@ export function ProfileCard() {
         </div>
       </div>
 
-      {/* IMAGE (HARUS DI ATAS TEXT) */}
       <div className="absolute inset-0 z-10">
         <Image
           src={profileData.image}
@@ -35,7 +32,6 @@ export function ProfileCard() {
         />
       </div>
 
-      {/* CTA */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20">
         <Link
           href={profileData.ctaHref}

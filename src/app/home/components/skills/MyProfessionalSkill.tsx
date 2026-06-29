@@ -24,7 +24,6 @@ export default function MyProfessionalSkill() {
           My Professional Skill
         </h2>
 
-        {/* Grid 2x3 per halaman */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {currentSkills.map((skill, index) => (
             <SkillCard
@@ -37,7 +36,6 @@ export default function MyProfessionalSkill() {
           ))}
         </div>
 
-        {/* Pagination Dots */}
         {totalPages > 1 && (
           <div className="mt-10 flex justify-center gap-3">
             {Array.from({ length: totalPages }).map((_, index) => (

@@ -27,7 +27,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         </div>
       </div>
 
-      {/* Image dengan next/image */}
       <div className="relative h-[284px] w-full overflow-hidden rounded-xl md:h-[284px] md:w-[381px]">
         <Image
           src={image}
@@ -37,13 +36,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           className="object-cover"
         />
       </div>
-
-      {/* Title */}
       <h3 className="font-poppins text-xl font-semibold leading-[34px] text-[#0A0D12]">
         {title}
       </h3>
-
-      {/* Visit Website Link */}
       <a
         href={link}
         target="_blank"

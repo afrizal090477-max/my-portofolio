@@ -46,7 +46,6 @@ function Brand({ priority = false, surface = "dark", onClick }: BrandProps) {
         height={289}
         priority={priority}
         sizes="26.3px"
-        // 💡 PERBAIKAN DI SINI: Menambahkan object-top ke dalam array string class
         className={["h-[28.85px] w-[26.3px]", "shrink-0 rounded-full object-cover object-top"].join(
           " ",
         )}

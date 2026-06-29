@@ -18,19 +18,15 @@ const MyWorkExperience = () => {
           {experiences.map((experience, index) => (
             <div 
               key={experience.id} 
-              // pl-14 di mobile untuk memberikan ruang bernapas bagi garis dan titik di sebelah kiri
               className="relative flex flex-col gap-6 pl-14 md:flex-row md:items-start md:gap-[72px] md:pl-0"
             >
               
-              {/* === TIMELINE LINES (GARIS) === */}
               {index < experiences.length - 1 && (
                 <>
-                  {/* Garis Desktop - Tetap Terkunci */}
                   <div 
                     className="absolute hidden h-[calc(100%+64px)] border-l-2 border-dashed border-[#A4A7AE] md:block"
                     style={{ left: '200px', top: '40px' }}
                   />
-                  {/* Garis Mobile - Menyesuaikan posisi titik mobile (left: 16px) */}
                   <div 
                     className="absolute block h-[calc(100%+64px)] border-l-2 border-dashed border-[#A4A7AE] md:hidden"
                     style={{ left: '16px', top: '28px' }}
@@ -38,10 +34,8 @@ const MyWorkExperience = () => {
                 </>
               )}
               
-              {/* === LEFT: Company Logo + Name + Period === */}
+
               <div className="flex w-full flex-col gap-3 md:w-[160px] md:flex-shrink-0 md:items-end md:text-right">
-                
-                {/* Logo Company */}
                 {experience.logo && (
                   <div className="flex h-12 items-center md:justify-end">
                     <Image
@@ -53,26 +47,17 @@ const MyWorkExperience = () => {
                     />
                   </div>
                 )}
-
-                {/* Company Name */}
                 <span className="font-poppins text-lg font-semibold text-[#0A0D12]">
                   {experience.company}
                 </span>
-
-                {/* Period */}
                 <span className="font-poppins text-base text-[#414651]">
                   {experience.period}
                 </span>
               </div>
-
-              {/* === TIMELINE DOT (TITIK UNGU) === */}
-              {/* Di Mobile: top-3 (12px) pas di tengah-tengah tinggi container logo (h-12 / 48px) */}
-              {/* Di Desktop: Tetap terkunci di left-180px dan top-2 */}
               <div className="absolute left-[4px] top-3 z-20 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-dashed border-[#A4A7AE] bg-white p-1 md:left-[180px] md:top-2 md:h-10 md:w-10">
                 <div className="h-full w-full rounded-full bg-[#8B32FF]" />
               </div>
 
-              {/* === RIGHT: Job Title + Description === */}
               <div className="flex-1">
                 <WorkExperienceCard experience={experience} />
               </div>

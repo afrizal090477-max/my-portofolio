@@ -12,11 +12,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
 }) => {
   return (
     <div className="flex flex-col items-start gap-6 rounded-2xl border border-[#D5D7DA] bg-white p-6">
-      {/* Profile Photo */}
-      {/* Profile Photo */}
 <div className="relative h-20 w-20 overflow-hidden rounded-full border border-[#E5E7EB]">
- {/* Profile Photo - Menyesuaikan Frame 1618873226 */}
-{/* Di Mobile: h-15 w-15 (60px) | Di Desktop (min-[1200px]): h-20 w-20 (80px) */}
 <div className="relative h-[60px] w-[60px] min-[1200px]:h-20 min-[1200px]:w-20 overflow-hidden rounded-full border border-[#E5E7EB]">
   <Image
     src={photo}

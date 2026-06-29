@@ -14,10 +14,9 @@ export default function About() {
 
         <AboutIntro />
 
-        {/* FIXED GRID SYSTEM */}
         <div className="mt-[48px] grid grid-cols-1 lg:grid-cols-12 gap-[20px]">
 
-          {/* ROW 1 */}
+
           <div className="lg:col-span-4">
             <WhyChooseMeCard />
           </div>
@@ -30,7 +29,6 @@ export default function About() {
             <ExperienceCard />
           </div>
 
-          {/* ROW 2 */}
           <div className="lg:col-span-4">
             <ProfileCard />
           </div>

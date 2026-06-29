@@ -1,7 +1,7 @@
 export interface Experience {
   id: number;
   company: string;
-  logo?: string;           // nanti bisa pakai gambar logo
+  logo?: string;           
   period: string;
   role: string;
   description: string;

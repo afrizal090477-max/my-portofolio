@@ -1,4 +1,3 @@
-// src/app/home/components/why-choose-me/WhyChooseMe.tsx
 import { WhyChooseMeTable } from "./WhyChooseMeTable";
 import { Container } from "@/components/layouts/container";
 import { whyChooseMeData } from "@/constant/why-choose-me-data";

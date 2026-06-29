@@ -18,13 +18,12 @@ export function ExpertSkillCard({ index = 0 }: { index?: number }) {
       className="bg-[#181D27] text-white relative overflow-hidden
                  w-full min-h-[395px] rounded-[16px]"
     >
-      {/* ================= HEADER (FIGMA FIXED) ================= */}
+
       <div className="absolute left-6 right-6 top-[29px] z-20">
         <h3 className="text-[32px] font-bold leading-[46px] tracking-[-0.02em]">
           {expertSkillData.title}
         </h3>
 
-        {/* Stars */}
         <div className="mt-3 flex items-center gap-1">
           {Array.from({ length: expertSkillData.rating }).map((_, i) => (
             <Star
@@ -40,9 +39,7 @@ export function ExpertSkillCard({ index = 0 }: { index?: number }) {
         </p>
       </div>
 
-      {/* ================= TECH SECTION (STRICT FIGMA GRID) ================= */}
       <div className="absolute left-6 top-[222px] z-30 w-[333px] flex flex-col gap-6">
-        {/* ROW 1 */}
         <div className="flex items-center gap-4 h-[52.58px] w-full">
           {technologyRows[0].map((tech) => (
             <div key={tech.name} className="w-[52.58px] h-[52.58px]">
@@ -51,7 +48,6 @@ export function ExpertSkillCard({ index = 0 }: { index?: number }) {
           ))}
         </div>
 
-        {/* ROW 2 */}
         <div className="flex items-center gap-4 h-[52.58px] w-full">
           {technologyRows[1].map((tech) => (
             <div key={tech.name} className="w-[52.58px] h-[52.58px]">

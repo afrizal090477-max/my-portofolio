@@ -1,4 +1,3 @@
-// src/app/home/components/skills/SkillProgressBar.tsx
 interface SkillProgressBarProps {
   progress: number;
 }

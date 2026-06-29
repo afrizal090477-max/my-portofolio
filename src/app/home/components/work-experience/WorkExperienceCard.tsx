@@ -1,4 +1,3 @@
-// src/app/home/components/work-experience/WorkExperienceCard.tsx
 'use client';
 
 import React from 'react';

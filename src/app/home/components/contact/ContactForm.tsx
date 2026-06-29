@@ -35,10 +35,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onResult }) => {
         },
         body: jsonPayload,
       });
-
-      // 💡 PERBAIKAN DI SINI: Langsung panggil tanpa membuat variabel 'const data ='
       await response.json();
-
       if (response.ok) {
         onResult('success'); 
         form.reset(); 

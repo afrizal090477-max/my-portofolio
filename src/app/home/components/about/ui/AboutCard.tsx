@@ -28,16 +28,9 @@ export function AboutCard({
       transition={{ duration: 0.45 }}
       viewport={{ once: true, margin: "-80px" }}
       className={cn(
-        // BASE STRUCTURE (PIXEL SAFE)
         "relative w-full overflow-hidden rounded-2xl",
-
-        // VISUAL STYLE (STATIC ONLY)
         "border border-gray-100 bg-white shadow-sm",
-
-        // SIZE SYSTEM
         cardSizeClasses[size],
-
-        // HOVER (SAFE - NO LAYOUT SHIFT)
         "hover:shadow-xl transition-shadow duration-300",
 
         className

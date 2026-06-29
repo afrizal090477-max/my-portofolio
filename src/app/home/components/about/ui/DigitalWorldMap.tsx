@@ -16,11 +16,6 @@ const mapFrameClasses: Record<DigitalWorldMapVariant, string> = {
   desktop: cn("left-[30.779%] top-0", "h-[104.051%] w-[83.985%]"),
   mobile: cn("left-[-4.986%] top-[11.062%]", "h-[81.195%] w-[101.108%]"),
 };
-
-/*
- * Posisi marker dihitung terhadap frame peta,
- * bukan terhadap keseluruhan card.
- */
 const markerClasses: Record<DigitalWorldMapVariant, Record<Country, string>> = {
   desktop: {
     germany: "left-[12.165%] top-[32.603%]",

@@ -1,4 +1,3 @@
-// src/constant/why-choose-me-data.ts
 export interface SkillRow {
   id: number;
   skill: string;
