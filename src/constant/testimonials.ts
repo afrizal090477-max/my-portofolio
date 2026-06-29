@@ -1,0 +1,58 @@
+import { Testimonial } from "@/types/testimonial";
+
+export const testimonials: Testimonial[] = [
+  {
+    id: 1,
+    company: "Upwork",
+    logoColor: "#14A800",
+    quote: "Thanks to their expertise, our website is now faster, more responsive, and visually stunning. We've seen a significant increase in user engagement!",
+    stars: 5,
+    name: "Robert Lewandowski",
+    position: "Head of Engineering, Upwork",
+  },
+  {
+    id: 2,
+    company: "Zapier",
+    logoColor: "#FF4A00",
+    quote: "Thanks to their expertise, our website is now faster, more responsive, and visually stunning. We've seen a significant increase in user engagement!",
+    stars: 5,
+    name: "Dani Olmo",
+    position: "Product Manager, Zapier",
+  },
+  {
+    id: 3,
+    company: "Trustpilot",
+    logoColor: "#2D8CFF",
+    quote: "Thanks to their expertise, our website is now faster, more responsive, and visually stunning. We've seen a significant increase in user engagement!",
+    stars: 5,
+    name: "Jude Bellingham",
+    position: "Vice President, Zoom",
+  },
+  {
+    id: 4,
+    company: "Postman",
+    logoColor: "#14A800",
+    quote: "Thanks to their expertise, our website is now faster, more responsive, and visually stunning. We've seen a significant increase in user engagement!",
+    stars: 5,
+    name: "Robert Lewandowski",
+    position: "Head of Engineering, Upwork",
+  },
+  {
+    id: 5,
+    company: "Spotify",
+    logoColor: "#FF4A00",
+    quote: "Thanks to their expertise, our website is now faster, more responsive, and visually stunning. We've seen a significant increase in user engagement!",
+    stars: 5,
+    name: "Dani Olmo",
+    position: "Product Manager, Zapier",
+  },
+  {
+    id: 6,
+    company: "Zoom",
+    logoColor: "#2D8CFF",
+    quote: "Thanks to their expertise, our website is now faster, more responsive, and visually stunning. We've seen a significant increase in user engagement!",
+    stars: 5,
+    name: "Jude Bellingham",
+    position: "Vice President, Zoom",
+  },
+];

@@ -8,6 +8,7 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700", "800"],
   style: ["normal"],
   display: "swap",
+  preload: false,
   variable: "--font-poppins",
 });
 
@@ -16,6 +17,7 @@ const outfit = Outfit({
   weight: ["600"],
   style: ["normal"],
   display: "swap",
+  preload: false,
   variable: "--font-outfit",
 });
 
@@ -37,7 +39,7 @@ export default function RootLayout({
 }: RootLayoutProps) {
   return (
     <html
-      lang="en"
+      lang="en" 
       className={`${poppins.variable} ${outfit.variable}`}
     >
       <body>{children}</body>

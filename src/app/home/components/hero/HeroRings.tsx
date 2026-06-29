@@ -1,32 +1,44 @@
+const fluidRingTop =
+  "clamp(242px, calc(283.26px - 2.865vw), 272px)";
+
+const fluidOuterRingSize =
+  "clamp(607px, calc(452.73px + 39.255vw), 1018px)";
+
 export function HeroRings() {
   return (
     <div
       aria-hidden="true"
       className={[
-        "absolute left-1/2 top-[272px] z-0",
-        "flex size-[607px] -translate-x-1/2 items-center justify-center",
-        "rounded-full bg-[#6600EB]/20 opacity-70",
-        "desktop:top-[242px] desktop:size-[1018px]",
+        "absolute left-1/2 z-0",
+        "flex -translate-x-1/2",
+        "items-center justify-center",
+        "rounded-full",
+        "bg-[#6600EB]/20 opacity-70",
       ].join(" ")}
+      style={{
+        top: fluidRingTop,
+        width: fluidOuterRingSize,
+        height: fluidOuterRingSize,
+      }}
     >
       <div
         className={[
-          "flex size-[476.64px] items-center justify-center",
+          "flex size-[78.524%]",
+          "items-center justify-center",
           "rounded-full bg-[#6600EB]/40",
-          "desktop:size-[799.37px]",
         ].join(" ")}
       >
         <div
           className={[
-            "flex size-[346.28px] items-center justify-center",
+            "flex size-[72.653%]",
+            "items-center justify-center",
             "rounded-full bg-[#6600EB]/60",
-            "desktop:size-[580.74px]",
           ].join(" ")}
         >
           <div
             className={[
-              "size-[215.91px] rounded-full bg-[#6600EB]/80",
-              "desktop:size-[362.11px]",
+              "size-[62.351%]",
+              "rounded-full bg-[#6600EB]/80",
             ].join(" ")}
           />
         </div>

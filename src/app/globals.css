@@ -2,19 +2,17 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-
-
 @theme inline {
-/* Fonts */
+  /* Fonts */
   --font-sans: var(--font-poppins);
   --font-heading: var(--font-poppins);
   --font-brand: var(--font-outfit);
 
-  --breakpoint-desktop: 90rem;
-  --container-site: 90rem;
-  --container-content: 74rem;
+  --breakpoint-tablet: 48rem; /* 768px */
+  --breakpoint-desktop: 75rem; /* 1200px */
+  --breakpoint-wide: 90rem; /* 1440px */
 
-/* Body Typography */
+  /* Body Typography */
   --text-body-xs: 0.75rem;
   --text-body-xs--line-height: 1.5rem;
 
@@ -48,7 +46,7 @@
 
   --tracking-display: -0.02em;
 
-/* Neutral Palette */
+  /* Neutral Palette */
   --color-white: #ffffff;
   --color-black: #000000;
 
@@ -65,38 +63,18 @@
   --color-gray-900: #181d27;
   --color-gray-950: #0a0d12;
 
-/* Purple brand Palette */
+  /* Purple brand Palette */
   --color-purple-50: #f3ebff;
   --color-purple-400: #8b32ff;
   --color-purple-500: #6600eb;
   --color-purple-600: #6941c6;
   --color-purple-950: #160131;
-
-  /*
-  |--------------------------------------------------------------------------
-  | Orange accent palette
-  |--------------------------------------------------------------------------
-  */
-
   --color-orange-50: #fff7ef;
   --color-orange-400: #f3993f;
   --color-orange-500: #e17b0e;
   --color-orange-950: #492602;
-
-  /*
-  |--------------------------------------------------------------------------
-  | Status palette confirmed in Figma
-  |--------------------------------------------------------------------------
-  */
-
   --color-success-50: #ecfdf3;
   --color-success-200: #abefc6;
-
-  /*
-  |--------------------------------------------------------------------------
-  | Semantic colors
-  |--------------------------------------------------------------------------
-  */
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -126,14 +104,6 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  /*
-  |--------------------------------------------------------------------------
-  | Semantic radius
-  |--------------------------------------------------------------------------
-  |
-  | Tidak mengubah rounded-sm / rounded-md bawaan Tailwind.
-  | Ini mencegah komponen shadcn berubah tanpa disengaja.
-  */
 
   --radius-logo: 0.5rem;
   --radius-surface: 0.75rem;
@@ -141,14 +111,7 @@
   --radius-panel: 1.25rem;
   --radius-pill: 9999px;
 
-  /*
-  |--------------------------------------------------------------------------
-  | Shadows
-  |--------------------------------------------------------------------------
-  */
-
   --shadow-xs: 0 1px 2px rgb(10 13 18 / 5%);
-
   --shadow-lg:
     0 12px 16px -4px rgb(10 13 18 / 8%), 0 4px 6px -2px rgb(10 13 18 / 3%),
     0 2px 2px -1px rgb(10 13 18 / 4%);
@@ -160,12 +123,6 @@
     0 1.125px 3.375px rgb(10 13 18 / 10%), 0 1.125px 2.25px rgb(10 13 18 / 6%),
     inset 0 -0.5625px 0.5625px rgb(10 13 18 / 10%);
 
-  /*
-  |--------------------------------------------------------------------------
-  | Gradients confirmed in Figma
-  |--------------------------------------------------------------------------
-  */
-
   --background-image-blue-gradient: linear-gradient(
     104.24deg,
     #002c6e 26.91%,
@@ -173,13 +130,6 @@
   );
 }
 
-/*
-|--------------------------------------------------------------------------
-| Light theme
-|--------------------------------------------------------------------------
-|
-| Dark theme belum dibuat karena belum ada desain dark mode dari Figma.
-*/
 
 :root {
   color-scheme: light;
@@ -205,10 +155,6 @@
   --accent: #fff7ef;
   --accent-foreground: #492602;
 
-  /*
-   * Functional fallback untuk variant destructive shadcn.
-   * Akan ditinjau lagi ketika error-state Figma tersedia.
-   */
   --destructive: #d92d20;
   --destructive-foreground: #ffffff;
 
@@ -217,11 +163,6 @@
   --ring: #8b32ff;
 }
 
-/*
-|--------------------------------------------------------------------------
-| Base styles
-|--------------------------------------------------------------------------
-*/
 
 @layer base {
   *,
@@ -231,15 +172,22 @@
   }
 
   html {
+    width: 100%;
     min-width: 320px;
+    max-width: 100%;
+    overflow-x: clip;
     scroll-behavior: smooth;
     text-rendering: optimizeLegibility;
   }
 
   body {
+    width: 100%;
+    min-width: 320px;
+    max-width: 100%;
+    overflow-x: clip;
+
     @apply min-h-svh bg-background font-sans text-foreground antialiased;
 
-    overflow-x: clip;
     font-synthesis: none;
   }
 
@@ -276,11 +224,6 @@
   }
 }
 
-/*
-|--------------------------------------------------------------------------
-| Reduced motion accessibility
-|--------------------------------------------------------------------------
-*/
 
 @media (prefers-reduced-motion: reduce) {
   html {
